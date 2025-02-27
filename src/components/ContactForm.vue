@@ -52,7 +52,7 @@
         Field,
         ErrorMessage,
     },
-    emits: ["submit:contact", "delete:contact"],
+    emits: ["submit:contact", "delete:contact", "create:contact"],
     props: {
         contact: { type: Object, required: true }
     },
@@ -89,6 +89,7 @@
         deleteContact() {
             this.$emit("delete:contact", this.contactLocal.id);
         },
+
         Cancel(){
             const reply = window.confirm('You have unsaved changes! Do you want to leave?')
 
